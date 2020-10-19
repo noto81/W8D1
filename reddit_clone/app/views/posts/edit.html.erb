@@ -1,0 +1,15 @@
+<h1>Edit New Post</h1>
+<form action="<%= edit_post_url(@post) %>" method="post">
+<input type="hidden" name="_method" value="PATCH">
+
+<label>Title
+    <input type="text" name="post[title]" value="<%= @post.title %>">
+</label>
+<label>URL
+    <input type="text" name="post[url]" value="<%= @post.url %>">
+</label>
+<label>Content
+    <textarea name="post[content]" cols="30" rows="10"><%= @post.content %></textarea>
+</label>
+<button>Edit Post</button>
+</form>
